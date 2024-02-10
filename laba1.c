@@ -14,10 +14,20 @@ int main()
     
     printf("d=%lf\n",d);
     
-    x1 = (-b + sqrt(d)/(2*a));
-    x2 = (-b + sqrt(d)/(2*a));
+    if (d>0){
+        x1 = (-b + sqrt(d)/(2*a));
+        x2 = (-b - sqrt(d)/(2*a));
     
     printf("x1=%lf x2=%lf", x1, x2);
-
+    }
+    
+    if (d==0) {
+        x1 = (-b)/(2*a);
+        printf("x1=%lf",x1);
+    }
+    
+    if (d<0){
+        printf("корней нет");
+    }
     return 0;
 }
